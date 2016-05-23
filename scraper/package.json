@@ -1,0 +1,12 @@
+{
+  "name"         : "web-scrapper",
+  "version"      : "0.0.1",
+  "description"  : "Web Scrapper",
+  "main"         : "server.js",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest",
+    "body-parser" : "latest"
+  }
+}
