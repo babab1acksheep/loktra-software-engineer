@@ -94,4 +94,5 @@ var findTotalResults = function (url, totalPages, resultsPerPage, res){
 }
 
 app.listen('3000')
+console.log('Application started on port 3000');
 exports = module.exports = app;
