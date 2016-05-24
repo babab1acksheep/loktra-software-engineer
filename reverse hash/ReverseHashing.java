@@ -3,24 +3,23 @@ import java.util.Scanner;
 
 public class ReverseHashing {
 
+	static String letters = "acdegilmnoprstuw";
+	static int maxStrLength = letters.length();
+	
 	public static void main(String[] args) {
 		Scanner inputScanner = new Scanner(System.in);
 		System.out.println("Enter the hash value:");
 		long hash = inputScanner.nextLong();
-		System.out.println("Enter the number of letters in the string:");
-		int strLength = inputScanner.nextInt();
-		System.out.println(reverseHash(hash,new StringBuffer(),strLength));
+		System.out.println(reverseHash(hash,new StringBuffer(),maxStrLength));
 		
 	}
 	
-	public static StringBuffer reverseHash(long finalHash, StringBuffer hashedString, int strLength){
-		String letters = "acdegilmnoprstuw";
-		if(strLength==0){
-			if(finalHash==7)
-				return hashedString.reverse();
-			else
-				return new StringBuffer("Sorry! There is no string for the given hash with the given number of letters!");		
-		}		
+	public static StringBuffer reverseHash(long finalHash, StringBuffer hashedString, int strLength){		
+		if(finalHash==7)
+			return hashedString.reverse();
+		else if(strLength == 0){
+				return new StringBuffer("Sorry! There is no string for the given hash!");	
+			}
 		else{
 			for(int i = 0 ; i<letters.length() ; i++){
 				if((finalHash-i)%37==0){
@@ -30,6 +29,6 @@ public class ReverseHashing {
 				}
 			}
 			return reverseHash(finalHash, hashedString, --strLength);
-		}				
+		}			
 	}
 }

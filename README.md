@@ -17,8 +17,7 @@ Reverse Hash:
 Run the JAVA application. 
 
 In the console do the following:
-Enter the hash value 
 
-Enter the number of letters of the string
+Enter the hash value 
 
 If a suitable string is found, the program will output the same.
