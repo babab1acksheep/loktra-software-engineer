@@ -14,4 +14,11 @@ The application starts on port 3000. The REST endpoint is described in comments.
 
 Reverse Hash:
 
-Run the JAVA application. The 9 letter string will be printed as output.
+Run the JAVA application. 
+
+In the console do the following:
+Enter the hash value 
+
+Enter the number of letters of the string
+
+If a suitable string is found, the program will output the same.
